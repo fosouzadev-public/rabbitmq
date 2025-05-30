@@ -18,7 +18,8 @@ public class RabbitMqService : IAsyncDisposable
             Port = 5672,
             UserName = "admin",
             Password = "Abc-123456",
-            VirtualHost = "/"
+            VirtualHost = "/",
+            //Uri = new Uri("amqp://localhost:5672")
         };
 
         _connection = await factory.CreateConnectionAsync();
